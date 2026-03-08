@@ -1,0 +1,80 @@
+# Valid Palindrome Substring
+
+Given a string `s`, determine if it's possible to make it a palindrome by removing at most one character.
+
+A palindrome is a string that reads the same forward and backward.
+
+### Examples
+
+**Example 1:**
+
+Input: `s = "aba"`
+
+Output: `True`
+
+Explanation: Already a palindrome.
+
+**Example 2:**
+
+Input: `s = "abca"`
+
+Output: `True`
+
+Explanation: You could delete 'c' to make "aba" or delete 'b' to make "aca".
+
+**Example 3:**
+
+Input: `s = "abc"`
+
+Output: `False`
+
+Explanation: Cannot make a palindrome by removing at most one character.
+
+**Example 4:**
+
+Input: `s = "racecar"`
+
+Output: `True`
+
+Explanation: Already a palindrome.
+
+**Example 5:**
+
+Input: `s = "deeee"`
+
+Output: `True`
+
+Explanation: Remove the 'd' to make "eeee" which is a palindrome.
+
+## Constraints
+
+- `1` <= `len(s)` <= `10^5`
+- `s` consists of lowercase English letters only
+
+## Bonus Challenges (Optional)
+
+Once you have a working solution, consider these extensions:
+
+### Bonus 1: Count Valid Removals (Optional)
+
+Write a new function `count_valid_removals(s: str) -> int` that returns the count of how many different single-character removals would result in a palindrome. If the string is already a palindrome, return 1 (no removal needed). If no single removal creates a palindrome, return 0.
+
+For example:
+- `"aba"` returns `1` (already a palindrome, no removal needed)
+- `"abca"` returns `2` (can remove 'b' at index 1, or 'c' at index 2)
+- `"abc"` returns `0` (no single removal works)
+
+Think about how you can reuse the logic from your main function to check each possible removal.
+
+### Bonus 2: Optimize for Performance (Optional)
+
+Analyse and optimize your solution to meet these performance requirements:
+- **Time Complexity**: O(n) where n is the length of the string
+- **Space Complexity**: O(1) - no additional data structures proportional to input size
+
+Constraints for this optimisation:
+- You may NOT create any substring copies (slicing creates copies in Python)
+- You may NOT use string reversal operations (they create copies)
+- You may NOT use extra arrays or lists for character storage
+- You must use a two-pointer approach working from both ends
+- At most two passes through the string are allowed
