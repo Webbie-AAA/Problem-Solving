@@ -9,3 +9,8 @@ def return_dna_complement(dna: str) -> str:
         complement += pairing_dict[letter]
     return complement
     ...
+
+
+# TODO: Reduce time complexity
+# TODO: Think of more error handling and edge cases
+# What can you do with .join()
