@@ -15,6 +15,8 @@ def number_multiplies_itself(num: int) -> int:
         multiplied *= int(i)
     return multiplied
 
+# TODO: Is there an easier way to do the multiplicative element of the problem?
+
 
 if __name__ == '__main__':
     print(get_multiplicative_persistence(999))

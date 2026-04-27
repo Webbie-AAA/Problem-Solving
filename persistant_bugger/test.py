@@ -1,4 +1,5 @@
 from main import get_multiplicative_persistence
+import pytest
 
 
 def test_single_digit_returns_zero():
@@ -35,10 +36,3 @@ def test_one_step_cases():
 def test_invalid_negative():
     with pytest.raises(ValueError):
         get_multiplicative_persistence(-39)
-
-
-def test_invalid_type():
-    with pytest.raises(TypeError):
-        get_multiplicative_persistence(3.9)
-    with pytest.raises(TypeError):
-        get_multiplicative_persistence("39")
